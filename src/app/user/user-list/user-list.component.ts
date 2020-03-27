@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
         console.debug("User-list:",  res)
       },
       err=>{
-        console.error(err);
+        console.error("USer List:", err);
       }
     );
   }
