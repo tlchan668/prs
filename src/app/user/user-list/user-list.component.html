@@ -1,4 +1,14 @@
+<app-menu></app-menu>
+    <!--
+<label>StudentList</label> |
+<a routerLink="/students/create">Create</a> | 
+<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 
+<tr *ngFor="let s of students | studentSearch:searchCriteria | sort:'name'">
+-->
+
+<label>UserList</label> |
+<a routerLink="/users/create">Create</a> 
 <div class = "component">
     <table class= "table table-sm table-striped">
         
@@ -22,7 +32,8 @@
             <td>{{u.isReviewer ? "Y" : "N"}}</td>
             <td>{{u.isAdmin? "Y" : "N"}}</td>
             <td>
-               
+                <a routerLink="/users/detail/{{u.id}}">Detail</a> |
+                <a routerLink="/users/edit/{{u.id}}">Edit</a>
             </td>
         </tr>
     </table>

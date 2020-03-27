@@ -14,6 +14,18 @@ export class UserService {
     //bring back all rows of user
     return this.http.get(`${url}`) as Observable<User[]>;    
   }
+  get(id: any): Observable<User>{
+    return this.http.get(`${url}/${id}`) as Observable<User>;
+  }
+  create(user : User): Observable<User> {
+    return this.http.post(`${url}`, user) as Observable<User>;
+  }
+  change(user : User): Observable<any> {
+  return this.http.put(`${url}/${user.id}`, user) as Observable<User>; 
+  } 
+  remove(user : User): Observable<any> {
+   return this.http.delete(`${url}/${user.id}`) as Observable<any>;
+  }
 
   constructor(
     private http: HttpClient

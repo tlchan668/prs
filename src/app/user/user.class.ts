@@ -9,6 +9,8 @@ export class User {
     lastname: string = "lastname";
     phone: string;
     email: string;
+    isReviewer: boolean;
+    isAdmin: boolean;
 
     constructor  () {}
 }
