@@ -1,0 +1,29 @@
+
+<div class = "component">
+    <table class= "table table-sm table-striped">
+        
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Reviewer?</th>
+            <th>Admin?</th>
+          </tr>
+        <tr *ngFor="let u of users" >
+            <td>{{u.id}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.lastname}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.isReviewer ? "Y" : "N"}}</td>
+            <td>{{u.isAdmin? "Y" : "N"}}</td>
+            <td>
+               
+            </td>
+        </tr>
+    </table>
+</div>
