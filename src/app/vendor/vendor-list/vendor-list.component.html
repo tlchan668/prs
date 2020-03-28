@@ -1,6 +1,7 @@
 <app-menu></app-menu>
 <label>VendorList</label> | 
-<a routerLink="/vendors/create">Create</a>
+<a routerLink="/vendors/create">Create</a> |
+<input [(ngModel)]="searchCriteria" type="text" placehold="Search">
 <div class = "component">
     <table class= "table table-sm table-striped">
         
@@ -15,14 +16,14 @@
             <th>Phone</th>
             <th>Email</th>
           </tr>
-        <tr *ngFor="let v of vendors" >
+        <tr *ngFor="let v of vendors | vendorSearch:searchCriteria">
             <td>{{v.id}}</td>
             <td>{{v.code}}</td>
             <td>{{v.name}}</td>
             <td>{{v.address}}</td>
             <td>{{v.city}}</td>
             <td>{{v.state}}</td>
-            <td>{{v.Zip}}</td>
+            <td>{{v.zip}}</td>
             <td>{{v.phone}}</td>
             <td>{{v.email}}</td>
             <td>

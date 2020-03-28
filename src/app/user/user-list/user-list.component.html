@@ -1,14 +1,11 @@
 <app-menu></app-menu>
     <!--
-<label>StudentList</label> |
-<a routerLink="/students/create">Create</a> | 
-<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
-
 <tr *ngFor="let s of students | studentSearch:searchCriteria | sort:'name'">
 -->
 
 <label>UserList</label> |
 <a routerLink="/users/create">Create</a> 
+<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 <div class = "component">
     <table class= "table table-sm table-striped">
         
@@ -22,7 +19,7 @@
             <th>Reviewer?</th>
             <th>Admin?</th>
           </tr>
-        <tr *ngFor="let u of users" >
+        <tr *ngFor="let u of users | userSearch:searchCriteria">
             <td>{{u.id}}</td>
             <td>{{u.username}}</td>
             <td>{{u.firstname}}</td>
