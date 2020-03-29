@@ -18,6 +18,11 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 import { SortPipe } from './pipes/sort.pipe';
 import { UserSearchPipe } from './user/user-search.pipe';
 import { VendorSearchPipe } from './user/vendor-search.pipe';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductSearchPipe } from './product/product-search.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { VendorSearchPipe } from './user/vendor-search.pipe';
     VendorEditComponent,
     SortPipe,
     UserSearchPipe,
-    VendorSearchPipe
+    VendorSearchPipe,
+    ProductCreateComponent,
+    ProductDetailComponent,
+    ProductEditComponent,
+    ProductListComponent,
+    ProductSearchPipe
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
