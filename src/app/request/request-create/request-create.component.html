@@ -1,0 +1,56 @@
+<app-menu></app-menu>
+<label>RequestCreate</label> |
+<div class = "component">
+    <table class = "table table-striped table-sm">
+        <tr>
+            <th>Id:</th>
+            <td>
+                <input [(ngModel)]="request.id" type="number" size="10" disabled>
+            </td>
+        </tr>
+        
+        <tr>
+            <th>Description:</th>
+                <td>
+                    <input [(ngModel)]="request.description" type="text" size="80" >
+                </td>
+        </tr>
+        <tr>
+            <th>Justification:</th>
+                <td>
+                    <input [(ngModel)]="request.justification" type="text" size="80" >
+                </td>
+        </tr>
+        <tr>
+                <th>Delivery Mode:</th>
+                    <td>
+                        <input [(ngModel)]="request.deliveryMode" type="text" size="20" >
+                    </td>
+        </tr>  
+        <tr>
+            <th>Status:</th>
+                <td>
+                    <input [(ngModel)]="request.status" type="text" size="20" disabled>
+                </td>
+         </tr> 
+         <tr>
+            <th>Total:</th>
+                <td>
+                    <input [(ngModel)]="request.total" type="number" size="11" disabled>
+                </td>
+         </tr> 
+         <tr>
+            <th>UserId:</th>
+                <td>
+                    <input [(ngModel)]="request.userId" type="number" size="10" disabled>
+                </td>
+         </tr> 
+        
+        <tr>
+            <td colspan="2">
+                <button (click)="save()" class="btn btn-primary">Save</button>
+            </td>
+        </tr>
+        
+    </table>
+</div>

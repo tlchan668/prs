@@ -19,7 +19,7 @@
             <th>Reviewer?</th>
             <th>Admin?</th>
           </tr>
-        <tr *ngFor="let u of users | userSearch:searchCriteria">
+        <tr *ngFor="let u of users | userSearch:searchCriteria | sort:'username'">
             <td>{{u.id}}</td>
             <td>{{u.username}}</td>
             <td>{{u.firstname}}</td>

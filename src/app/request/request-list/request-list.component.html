@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<label>RequestList</label> |
+<a routerLink="/requests/create">Create</a> | 
+<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+
+<div class = "component">
+    <table class= "table table-sm">
+        <tr>
+            <th align="left">Id</th>
+            <th align="left">Description</th>
+            <th align="left">Justification</th>
+            <th align="left">Rejection Reason</th>
+            <th align="left">Delivery Mode</th>
+            <th align="left">Status</th>
+            <th align="left">Total</th>
+            <th align="left">UserId</th>
+          </tr>
+        <tr *ngFor="let r of requests | requestSearch:searchCriteria | sort: 'description' " >
+            <td>{{r.id}}</td>
+            <td>{{r.description}}</td>
+            <td>{{r.justification}}</td>
+            <td>{{r.rejectionReason}}</td>
+            <td>{{r.deliveryMode}}</td>
+            <td>{{r.status}}</td>
+            <td>{{r.total}}</td>
+            <td>{{r.userId}}</td>
+            
+            <td>
+                <a routerLink="/requests/detail/{{r.id}}">Detail</a> |
+                <a routerLink="/requests/edit/{{r.id}}">Edit</a> |
+                <a routerLink="/requests/detail/{{r.id}}">Line</a>
+            </td>
+           
+        </tr>
+    </table>
+</div>

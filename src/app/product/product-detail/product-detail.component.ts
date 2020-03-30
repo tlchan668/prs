@@ -16,7 +16,7 @@ export class ProductDetailComponent implements OnInit {
     this.productsvc.remove(this.product).subscribe(
       res => {
         console.debug("product deleted", res);
-        this.router.navigateByUrl("/products/list")
+        this.router.navigateByUrl("/products/list");
       },
       err => {
         console.error("product delete failed", err)

@@ -13,7 +13,7 @@
             <th align="left">Unit</th>
             <th align="left">Vendor</th>
           </tr>
-        <tr *ngFor="let p of products | productSearch:searchCriteria " >
+        <tr *ngFor="let p of products | productSearch:searchCriteria  | sort:'name'" >
             <td>{{p.id}}</td>
             <td>{{p.partNbr}}</td>
             <td>{{p.name}}</td>
