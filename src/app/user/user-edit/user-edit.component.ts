@@ -33,6 +33,7 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.route.snapshot.params.id;
+    console.debug("userid", id);
     this.usersvc.get(id).subscribe(
       res=>{
         this.user= res;

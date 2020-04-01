@@ -47,8 +47,8 @@
         </tr>  
         <tr>
             <th>User Id:</th>
-                <td>
-                    <input [(ngModel)]="request.user.username" type="text" size="20" disabled>
+                <td *ngIf="request.user">
+                    <input [(ngModel)] ="request.user.username" type="text" size="20" disabled>
                 </td>
          </tr> 
          
