@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
@@ -16,6 +16,9 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestlineDetailComponent } from './requestline/requestline-detail/requestline-detail.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 
 
 
@@ -38,7 +41,9 @@ const routes: Routes = [
   {path: "requests/detail/:id", component: RequestDetailComponent},
   {path: "requests/create", component: RequestCreateComponent},
   {path: "requests/edit/:id", component: RequestEditComponent},
-
+  {path: "requestsline/detail/:id", component: RequestlineDetailComponent},
+  {path: "requestsline/edit/:id", component: RequestlineEditComponent},
+  {path: "requestsline/create/:id", component: RequestlineCreateComponent},
   {path: "**", component: UserListComponent}
 
 ];

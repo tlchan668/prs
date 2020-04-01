@@ -42,17 +42,17 @@
         <tr>
                 <th>Total:</th>
                     <td>
-                        <input [(ngModel)]="request.total" type="number" size="11" disabled>
+                        <input [(ngModel)]="request.total " type="number" size="11" disabled>
                     </td>
         </tr>  
         <tr>
             <th>User Id:</th>
                 <td>
-                    <input [(ngModel)]="request.userId" type="text" size="20" disabled>
+                    <input [(ngModel)]="request.user.username" type="text" size="20" disabled>
                 </td>
          </tr> 
          
-        <tr>
+        <tr> 
             <td colspan="2">
                 <button (click)="delete()" class="btn btn-danger">Delete</button>
             </td>

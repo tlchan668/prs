@@ -16,7 +16,10 @@ export class RequestCreateComponent implements OnInit {
   
   save(): void{
     this.request.userId=1;
+    
     this.request.rejectionReason='';
+   
+    
     this.requestsvc.create(this.request).subscribe(
       res => {
         console.debug("Request created", res);
