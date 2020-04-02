@@ -7,5 +7,7 @@ import { User } from './user/user.class';
 export class SystemService {
   loginUser: User = null;
 
+  
+
   constructor() { }
 }

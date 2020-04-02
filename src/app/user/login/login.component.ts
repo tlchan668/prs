@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
       res=>{
         this.user=res;
         this.systemsvc.loginUser=this.user; //system service prop
-        console.debug("login:", res)
+        console.debug("login:", this.systemsvc.loginUser)
         this.router.navigateByUrl("requests/list");
                
       },

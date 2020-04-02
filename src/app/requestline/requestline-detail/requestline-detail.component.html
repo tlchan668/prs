@@ -12,8 +12,10 @@
        <td>{{request.description}}</td>
        <td>{{request.status}}</td>
        <td>{{request.total | currency}}</td>
-       <td>{{request.userId}}</td>
+       <td *ngIf="request.user">
+            {{request.user.username}}</td>
     </tr>
+    
     </table>
 <table class = "table table-sm">
     <tr>
@@ -33,4 +35,11 @@
             <button (click)="delete(line)" class="btn btn-link">Remove</button> 
         </td> 
     </tr>    
+     <tr> 
+        <td colspan="2">
+            <button (click)="changetoReview()" class="btn btn-success">Review</button> |
+            
+            
+        </td>
+    </tr> 
 </table>

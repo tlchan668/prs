@@ -17,6 +17,11 @@ export class RequestlineDetailComponent implements OnInit {
   requestline: Requestline = new Requestline();
   id: number; 
   
+  changetoReview():void { 
+    
+  
+  }
+
   refresh():void{
     console.debug("Refresh id:",this.id);
     this.requestsvc.get(this.id).subscribe(

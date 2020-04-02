@@ -23,7 +23,7 @@
             <td>{{r.deliveryMode}}</td>
             <td>{{r.status}}</td>
             <td>{{r.total | currency}}</td>
-            <td>{{r.userId}}</td>
+            <td>{{r.user.username}}</td>
             
             <td>
                 <a routerLink="/requests/detail/{{r.id}}">Detail</a> |

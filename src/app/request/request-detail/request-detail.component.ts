@@ -12,6 +12,19 @@ export class RequestDetailComponent implements OnInit {
 
 request : Request = new Request();
 
+changetoReview():void { 
+  this.request.status="REVIEW";
+  this.requestsvc.change(this.request).subscribe(
+    res=>{
+      console.debug("Changed to review", res);
+    },
+    err=>{
+      console.error("request error", err);
+    }
+  );
+
+}
+
 delete(): void{
   this.requestsvc.remove(this.request).subscribe(
     res =>{
