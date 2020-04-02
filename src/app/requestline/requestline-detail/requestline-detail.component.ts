@@ -17,8 +17,17 @@ export class RequestlineDetailComponent implements OnInit {
   requestline: Requestline = new Requestline();
   id: number; 
   
-  changetoReview():void { 
-    
+  changetoReview(request: Request):void { 
+    console.debug("Request in changetoreview:", request);
+    this.requestsvc.settoreview(request).subscribe(
+      res=>{
+        console.debug("Changed to review", res);
+        this.router.navigateByUrl("requests/list");
+      },
+      err=>{
+        console.error("request error", err);
+      }
+    );
   
   }
 

@@ -19,8 +19,8 @@ export class RequestCreateComponent implements OnInit {
 
   
   save(): void{
-    this.request.userId=1;
-   // this.request.userId=this.systemsvc.loginUser.id;
+    //this.request.userId=1;
+   this.request.userId=this.systemsvc.loginUser.id;
     
     this.request.rejectionReason='';
    

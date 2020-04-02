@@ -13,10 +13,11 @@ export class RequestDetailComponent implements OnInit {
 request : Request = new Request();
 
 changetoReview():void { 
-  this.request.status="REVIEW";
-  this.requestsvc.change(this.request).subscribe(
+  
+  this.requestsvc.settoreview(this.request).subscribe(
     res=>{
       console.debug("Changed to review", res);
+      this.router.navigateByUrl("requests/list");
     },
     err=>{
       console.error("request error", err);
@@ -24,6 +25,7 @@ changetoReview():void {
   );
 
 }
+
 
 delete(): void{
   this.requestsvc.remove(this.request).subscribe(

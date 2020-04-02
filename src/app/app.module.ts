@@ -32,6 +32,9 @@ import { RequestlineCreateComponent } from './requestline/requestline-create/req
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 import { RequestlineDetailComponent } from './requestline/requestline-detail/requestline-detail.component';
 import { LoginComponent } from './user/login/login.component';
+import { ListComponent } from './request/review/list/list.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { LoginComponent } from './user/login/login.component';
     RequestlineCreateComponent,
     RequestlineEditComponent,
     RequestlineDetailComponent,
-    LoginComponent
+    LoginComponent,
+    ListComponent,
+    RequestReviewListComponent,
+    RequestReviewItemComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
