@@ -67,6 +67,8 @@ export class RequestlineDetailComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     console.debug("ID:", this.id);
+    this.request.status="EDIT";
+    console.debug("ID:", this.request.status);
     this.refresh();
     // this.requestsvc.get(this.id).subscribe(
     //    res => {

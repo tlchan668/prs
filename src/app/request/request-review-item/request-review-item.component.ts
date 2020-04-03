@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../request.service';
 import { RequestlineService } from 'src/app/requestline/requestline.service';
 import { Requestline } from 'src/app/requestline/requestline.class';
+import {Request } from '../request.class'; 
 
 @Component({
   selector: 'app-request-review-item',
@@ -17,6 +18,7 @@ export class RequestReviewItemComponent implements OnInit {
   requestline: Requestline;
 
   settoapprove():void{
+    if(this.systemsvc.loginUser.isAdmin === true || this.systemsvc.loginUser.isReviewer){
     this.requestsvc.settoapprove(this.request).subscribe(
       res=>{
         console.debug("Approve request", res)
@@ -26,8 +28,11 @@ export class RequestReviewItemComponent implements OnInit {
         console.error("request review approvae error", err);
       }
     );
+    }
+    //else message don't have permission
   }
   settoreject():void{
+    if(this.systemsvc.loginUser.isAdmin  || this.systemsvc.loginUser.isReviewer){
     this.requestsvc.settoreject(this.request).subscribe(
       res=>{
         console.debug("Approve request", res)
@@ -37,6 +42,7 @@ export class RequestReviewItemComponent implements OnInit {
         console.error("request review approvae error", err);
       }
     );
+    }
   }
 
   constructor(

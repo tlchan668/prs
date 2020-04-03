@@ -13,6 +13,13 @@ export class UserCreateComponent implements OnInit {
   user: User = new User();
 
   save():void{
+    if(this.user.firstname == ''){
+      this.user.firstname = "noname";
+    }
+    if(this.user.lastname == ''){
+      this.user.lastname = "noname";
+    }
+  
     this.usersvc.create(this.user).subscribe(
     res=>{
       console.debug("User created", res);

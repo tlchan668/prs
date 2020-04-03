@@ -14,6 +14,9 @@ export class VendorCreateComponent implements OnInit {
   vendor: Vendor = new Vendor();
 
   save(): void{
+    if(this.vendor.name == ''){
+      this.vendor.name = "noname";
+    }
     this.vendorsvc.create(this.vendor).subscribe(
       res=>{
         console.debug("Vendor created:", res);

@@ -21,6 +21,7 @@ export class RequestCreateComponent implements OnInit {
   save(): void{
     //this.request.userId=1;
    this.request.userId=this.systemsvc.loginUser.id;
+  
     
     this.request.rejectionReason='';
    
@@ -45,6 +46,7 @@ export class RequestCreateComponent implements OnInit {
     this.request.deliveryMode="Pickup";
     this.request.status="NEW";
     this.loguser=this.systemsvc.loginUser;
+    console.debug("loguserr:", this.loguser.username);
     console.debug("loginuser:", this.systemsvc.loginUser);
     
   }
