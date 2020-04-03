@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../request.service';
 import { SystemService } from 'src/app/system.service';
-import { Request } from './request.class';
+import { Request } from '../request.class';
 
 @Component({
   selector: 'app-request-review-list',

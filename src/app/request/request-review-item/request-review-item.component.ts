@@ -17,7 +17,7 @@ export class RequestReviewItemComponent implements OnInit {
   request: Request;
   requestline: Requestline;
 
-  settoapprove():void{
+  settoapprove(request: Request):void{
     if(this.systemsvc.loginUser.isAdmin === true || this.systemsvc.loginUser.isReviewer){
     this.requestsvc.settoapprove(this.request).subscribe(
       res=>{
@@ -31,7 +31,7 @@ export class RequestReviewItemComponent implements OnInit {
     }
     //else message don't have permission
   }
-  settoreject():void{
+  settoreject(request: Request):void{
     if(this.systemsvc.loginUser.isAdmin  || this.systemsvc.loginUser.isReviewer){
     this.requestsvc.settoreject(this.request).subscribe(
       res=>{

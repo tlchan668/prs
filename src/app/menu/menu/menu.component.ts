@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Menu } from '../menu.class';
 import { UserService } from 'src/app/user/user.service';
 import { SystemService } from 'src/app/system.service';
+import { User } from 'src/app/user/user.class';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,7 @@ import { SystemService } from 'src/app/system.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-   
+  // logedinuser: User;
   // msg: string;
   // this.msg=this.systemsvc.loginUser.username;
   menus: Menu[] = [
@@ -32,7 +33,8 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    //this.logedinuser=this.systemsvc.loginUser;
+
   }
 
 }
