@@ -18,13 +18,13 @@ export class LoginComponent implements OnInit {
       res=>{
         this.user=res;
         this.systemsvc.loginUser=this.user; //system service prop
-        console.debug("login:", this.systemsvc.loginUser)
+        console.debug("loginUser:", this.systemsvc.loginUser)
         this.router.navigateByUrl("requests/list");
                
       },
       err=>{
         console.error("error in login", err);
-        this.msg = "User/Password not found";
+        this.msg = "User or Password not found";
       }
 
     );
